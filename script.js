@@ -18,9 +18,7 @@ async function fetchData() {
   }
 }
 
-fetchData();
-
-function uploadFile() {
+window.uploadFile = function () {
   const fileInput = document.getElementById('fileInput');
   const file = fileInput.files[0];
   const formData = new FormData();
@@ -34,5 +32,6 @@ function uploadFile() {
   .then(data => {
     document.getElementById('responseArea').innerText = data.plan || JSON.stringify(data);
   })
-  .catch(err => console.error("Upload failed:", err));
-}
+  .catch(err => console.error("Upload error:", err));
+};
+
