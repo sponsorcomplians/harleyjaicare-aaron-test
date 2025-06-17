@@ -33,22 +33,22 @@ You are a UK healthcare AI assistant. Generate a care plan in IANS format for th
 
 ${content}
 
-Use the IANS format, including: [DOMAIN NAME], How I want to be supported, Describe how staff will engage, Risks identified, and Risk Management.
-      `;
+Use the IANS format: [DOMAIN NAME], How I want to be supported, Describe how staff will engage, Risks identified, and Risk Management.
+`;
 
       const completion = await openai.createChatCompletion({
-        model: "gpt-4",
+        model: 'gpt-4',
         messages: [
-          { role: "system", content: "You are a specialist in comprehensive care planning for elderly, pediatric, and dementia patients using UK IANS standards." },
-          { role: "user", content: prompt }
+          { role: 'system', content: 'You are a specialist in care planning for UK elderly, pediatric, and dementia patients using IANS formats.' },
+          { role: 'user', content: prompt },
         ],
       });
 
       const plan = completion.data.choices[0].message.content;
       res.status(200).json({ plan });
     } catch (error) {
-      console.error("OpenAI Error:", error);
-      res.status(500).json({ error: "Error generating care plan" });
+      console.error(error);
+      res.status(500).json({ error: 'Failed to generate care plan' });
     }
   });
 }
