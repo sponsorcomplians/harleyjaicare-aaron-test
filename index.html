@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Supabase App</title>
-
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm" type="module"></script>
+  <title>Care Plan Generator</title>
+  <script src="https://unpkg.com/@supabase/supabase-js"></script>
 </head>
 <body>
-  <h1>My Supabase App</h1>
-  <ul id="data-list"></ul>
-
-  <h2>Upload Patient File</h2>
-  <input type="file" id="fileInput" />
-  <button onclick="uploadFile()">Upload & Process</button>
-  <pre id="responseArea"></pre>
-
-  <script src="script.js" type="module"></script>
+  <h1>Care Plan Generator</h1>
+  
+  <input type="file" id="fileInput">
+  <button onclick="uploadFile()">Upload and Process</button>
+  
+  <div id="carePlanOutput"></div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
