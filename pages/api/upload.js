@@ -2,7 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 import formidable from 'formidable';
 import fs from 'fs';
 
-const supabase = createClient(process.env.https//paznbsrkqmghufmbghwa.supabase.co, process.env.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhem5ic3JrcW1naHVmbWJnaHdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAxNjc4MDUsImV4cCI6MjA2NTc0MzgwNX0.UZwMpBq1pYkoq2-r_2zQvk60eW7auIfPahGSHlvhgKA);
+const supabase = createClient('https://paznbsrkqmghufmbghwa.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBhem5ic3JrcW1naHVmbWJnaHdhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAxNjc4MDUsImV4cCI6MjA2NTc0MzgwNX0.UZwMpBq1pYkoq2-r_2zQvk60eW7auIfPahGSHlvhgKA');
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
